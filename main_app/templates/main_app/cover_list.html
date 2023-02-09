@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Cover/Protection List</h1>
+
+{% for cover in cover_list %}
+  <a href="{% url 'covers_detail' cover.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ cover.name }}</span>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}
